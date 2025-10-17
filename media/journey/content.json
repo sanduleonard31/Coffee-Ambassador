@@ -1,27 +1,27 @@
 {
   "Card1": {
-    "Image": "",
+    "Image": "Screenshot 2025-10-17 at 11.04.03.png",
     "Description": "Started as a Barista at Starbucks - Beginning my coffee journey with a recommendation from a friend",
     "Year": 2022,
     "Month": 8,
     "CardStyle": "courage"
   },
   "Card2": {
-    "Image": "",
+    "Image": "JPEG image.jpeg",
     "Description": "Promoted to Shift Manager at Starbucks - Taking on leadership responsibilities",
     "Year": 2023,
     "Month": 3,
     "CardStyle": "results"
   },
   "Card3": {
-    "Image": "",
+    "Image": "Screenshot 2025-10-17 at 11.10.21.png",
     "Description": "Achieved Coffee Master Certification at Starbucks - Deepening my coffee expertise",
     "Year": 2023,
     "Month": 5,
     "CardStyle": "craft"
   },
   "Card4": {
-    "Image": "",
+    "Image": "Screenshot 2025-10-17 at 11.12.06.png",
     "Description": "First Place at Starbucks Regional Competition - First major competitive achievement",
     "Year": 2023,
     "Month": 5,
@@ -42,7 +42,7 @@
     "CardStyle": "belonging"
   },
   "Card7": {
-    "Image": "",
+    "Image": "Screenshot 2025-10-17 at 11.13.43.png",
     "Description": "First Place at Starbucks Regional Competition - Defending the title successfully",
     "Year": 2024,
     "Month": 4,
@@ -98,7 +98,7 @@
     "CardStyle": "craft"
   },
   "Card15": {
-    "Image": "",
+    "Image": "_com.apple.Foundation.NSItemProvider.xFzzAw.jpeg",
     "Description": "Judged District Championships RO2 Latte Art & Signature Beverage - Evaluated partners' speed, mastery, and creativity as they showcased innovative recipes from strawberry foam espressos to tonic water combinations, experiencing the perfect blend of craft and innovation in a competition decided by just 0.5 points",
     "Year": 2025,
     "Month": 4,
