@@ -1,0 +1,135 @@
+{
+  "Card1": {
+    "Image": "",
+    "Description": "Started as a Barista at Starbucks - Beginning my coffee journey with a recommendation from a friend",
+    "Year": 2022,
+    "Month": 8,
+    "CardStyle": "courage"
+  },
+  "Card2": {
+    "Image": "",
+    "Description": "Promoted to Shift Manager at Starbucks - Taking on leadership responsibilities",
+    "Year": 2023,
+    "Month": 3,
+    "CardStyle": "results"
+  },
+  "Card3": {
+    "Image": "",
+    "Description": "Achieved Coffee Master Certification at Starbucks - Deepening my coffee expertise",
+    "Year": 2023,
+    "Month": 5,
+    "CardStyle": "craft"
+  },
+  "Card4": {
+    "Image": "",
+    "Description": "First Place at Starbucks Regional Competition - First major competitive achievement",
+    "Year": 2023,
+    "Month": 5,
+    "CardStyle": "results"
+  },
+  "Card5": {
+    "Image": "Starbucks _wr-352.jpg",
+    "Description": "Placed 4th at Starbucks National Competition - Competing at the highest level",
+    "Year": 2023,
+    "Month": 7,
+    "CardStyle": "courage"
+  },
+  "Card6": {
+    "Image": "IMG_6459.jpg",
+    "Description": "Represented Starbucks at Coffee East - Showcasing skills at industry event",
+    "Year": 2024,
+    "Month": 4,
+    "CardStyle": "belonging"
+  },
+  "Card7": {
+    "Image": "",
+    "Description": "First Place at Starbucks Regional Competition - Defending the title successfully",
+    "Year": 2024,
+    "Month": 4,
+    "CardStyle": "results"
+  },
+  "Card8": {
+    "Image": "Starbucks-166.jpg",
+    "Description": "Champion at Starbucks National Competition - Reaching the pinnacle of national competition",
+    "Year": 2024,
+    "Month": 5,
+    "CardStyle": "results"
+  },
+  "Card9": {
+    "Image": "Barista_Day_3_157.jpg",
+    "Description": "Second Place at EMEA Competition - Competing internationally, visiting London and Amsterdam",
+    "Year": 2024,
+    "Month": 9,
+    "CardStyle": "courage"
+  },
+  "Card10": {
+    "Image": "Screenshot 2025-10-16 at 19.01.46.png",
+    "Description": "Created First BrewCrew Podcast - Sharing coffee knowledge and building community",
+    "Year": 2024,
+    "Month": 11,
+    "CardStyle": "joy"
+  },
+  "Card11": {
+    "Image": "Screenshot 2025-10-16 at 19.00.33.png",
+    "Description": "Moved to New Starbucks Store - New chapter, new opportunities",
+    "Year": 2025,
+    "Month": 1,
+    "CardStyle": "courage"
+  },
+  "Card12": {
+    "Image": "Screenshot 2025-10-16 at 19.04.20.png",
+    "Description": "Led Romania & Bulgaria Regional Roadshow - Presented comprehensive Starbucks culture journey from Pike Place origins to global Third Place philosophy, sharing the evolution of products, the meaning behind colored aprons, C.A.F.E. Practices ethical sourcing, and the five core values that unite partners across borders, inspiring regional teams with stories of craft, courage, joy, results, and belonging",
+    "Year": 2025,
+    "Month": 1,
+    "CardStyle": "belonging"
+  },
+  "Card13": {
+    "Image": "Screenshot 2025-10-16 at 19.02.19.png",
+    "Description": "Milano Reserve Roastery Training Experience - Coached EMEA 2024 champion for globals while working hands-on in one of the world's largest Reserve locations, mastering precision techniques across espresso bars, siphon brewing, and alternative methods alongside baristas from around the globe",
+    "Year": 2025,
+    "Month": 2,
+    "CardStyle": "craft"
+  },
+  "Card14": {
+    "Image": "bc-distritcro8.png",
+    "Description": "Judged District Championships RO8 Coffee Storytelling - Evaluated partners' presentation skills and authentic passion, mentoring competitors from 5-month beginners to 8-year veterans as they pursued their journey to represent Romania at EMEA level",
+    "Year": 2025,
+    "Month": 4,
+    "CardStyle": "craft"
+  },
+  "Card15": {
+    "Image": "",
+    "Description": "Judged District Championships RO2 Latte Art & Signature Beverage - Evaluated partners' speed, mastery, and creativity as they showcased innovative recipes from strawberry foam espressos to tonic water combinations, experiencing the perfect blend of craft and innovation in a competition decided by just 0.5 points",
+    "Year": 2025,
+    "Month": 4,
+    "CardStyle": "joy"
+  },
+  "Card16": {
+    "Image": "COFFeEAST Day 1-333.jpg",
+    "Description": "Competed at Coffee East Festival - Faced the intensity of manual espresso competition where every gram and second counted, learning that growth comes not from trophies but from stepping onto the stage alongside baristas who breathe and live coffee as an art form, transforming pressure into passion and lessons into fuel for future victories",
+    "Year": 2025,
+    "Month": 4,
+    "CardStyle": "courage"
+  },
+  "Card17": {
+    "Image": "IMG_20250520_235112.jpg",
+    "Description": "Rwanda Origin Experience Journey - Witnessed 'the first 10 feet' firsthand as one of 48 global partners, experiencing the care and precision of farming communities who cultivate, harvest, and process coffee, completing the full journey from Amsterdam roasting to understanding that every cup served is an act of respect for those who came before, deeply moved by the authentic spirit and belonging felt among people who live in harmony",
+    "Year": 2025,
+    "Month": 5,
+    "CardStyle": "belonging"
+  },
+  "Card18": {
+    "Image": "Starbucks-Mihnea Ratte-88.jpg",
+    "Description": "Judged National Barista Championships - Evaluated 59 passionate partners culminating from store to district to national finals, introducing special awards for each category to recognize individual excellence, and began 1-to-1 training sessions with the national champion to prepare for EMEA competition in London",
+    "Year": 2025,
+    "Month": 6,
+    "CardStyle": "craft"
+  },
+  "Card19": {
+    "Image": "SBC_Day_Two_151.jpg",
+    "Description": "Judged Starbucks EMEA Competition - Evaluating excellence at the international level",
+    "Year": 2025,
+    "Month": 9,
+    "CardStyle": "craft"
+  }
+}
