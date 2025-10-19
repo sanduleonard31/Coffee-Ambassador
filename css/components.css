@@ -29,6 +29,22 @@
   flex-wrap:wrap;
   border-bottom:2px solid rgba(26,55,44,0.1);
   padding-bottom:0.5rem;
+  flex-direction:row;
+  justify-content:flex-start;
+}
+
+@media (max-width: 600px) {
+  .tab-buttons {
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    justify-content: flex-start;
+  }
+  .tab-btn {
+    min-width: 40%;
+    font-size: 0.95rem;
+    padding: 0.5rem 0.5rem;
+    margin-bottom: 0.25rem;
+  }
 }
 
 .tab-btn{
