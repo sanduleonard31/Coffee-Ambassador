@@ -38,8 +38,8 @@ const createActions = (content, base) => {
   
   const buttons = [
     { condition: content.Link, text: 'Open link', href: content.Link, className: 'btn' },
-    { condition: content.Pdf, text: 'Open PDF', href: `${base}/${content.Pdf}`, className: 'btn secondary' },
-    { condition: content.Video && isExternalUrl(content.Video), text: 'Watch video', href: content.Video, className: 'btn' }
+    { condition: content.Video && isExternalUrl(content.Video), text: 'Watch video', href: content.Video, className: 'btn' },
+    { condition: content.Pdf, text: 'Open PDF', href: `${base}/${content.Pdf}`, className: 'btn secondary' }
   ];
   
   buttons.forEach(({ condition, text, href, className }) => {

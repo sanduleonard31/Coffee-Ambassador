@@ -57,17 +57,17 @@
   },
   "Card9": {
     "Image": "Barista_Day_3_157.jpg",
-    "Description": "Second Place at EMEA Competition - Competing internationally, visiting London and Amsterdam",
+    "Description": "Top Three at EMEA Competition - Competing internationally, visiting London and Amsterdam",
     "Year": 2024,
     "Month": 9,
     "CardStyle": "courage"
   },
   "Card10": {
-    "Image": "Screenshot 2025-10-16 at 19.01.46.png",
-    "Description": "Created First BrewCrew Podcast - Sharing coffee knowledge and building community",
+    "Image": "Barista_Day_2_251.jpg",
+    "Description": "Latte Art Winner at EMEA Competition - Excelling in latte art on the international stage",
     "Year": 2024,
-    "Month": 11,
-    "CardStyle": "joy"
+    "Month": 9,
+    "CardStyle": "results"
   },
   "Card11": {
     "Image": "Screenshot 2025-10-16 at 19.00.33.png",
@@ -84,48 +84,41 @@
     "CardStyle": "belonging"
   },
   "Card13": {
-    "Image": "Screenshot 2025-10-16 at 19.02.19.png",
-    "Description": "Milano Reserve Roastery Training Experience - Coached EMEA 2024 champion for globals while working hands-on in one of the world's largest Reserve locations, mastering precision techniques across espresso bars, siphon brewing, and alternative methods alongside baristas from around the globe",
-    "Year": 2025,
-    "Month": 2,
-    "CardStyle": "craft"
-  },
-  "Card14": {
     "Image": "bc-distritcro8.png",
     "Description": "Judged District Championships RO8 Coffee Storytelling - Evaluated partners' presentation skills and authentic passion, mentoring competitors from 5-month beginners to 8-year veterans as they pursued their journey to represent Romania at EMEA level",
     "Year": 2025,
     "Month": 4,
     "CardStyle": "craft"
   },
-  "Card15": {
+  "Card14": {
     "Image": "_com.apple.Foundation.NSItemProvider.xFzzAw.jpeg",
     "Description": "Judged District Championships RO2 Latte Art & Signature Beverage - Evaluated partners' speed, mastery, and creativity as they showcased innovative recipes from strawberry foam espressos to tonic water combinations, experiencing the perfect blend of craft and innovation in a competition decided by just 0.5 points",
     "Year": 2025,
     "Month": 4,
     "CardStyle": "joy"
   },
-  "Card16": {
+  "Card15": {
     "Image": "COFFeEAST Day 1-333.jpg",
     "Description": "Competed at Coffee East Festival - Faced the intensity of manual espresso competition where every gram and second counted, learning that growth comes not from trophies but from stepping onto the stage alongside baristas who breathe and live coffee as an art form, transforming pressure into passion and lessons into fuel for future victories",
     "Year": 2025,
     "Month": 4,
     "CardStyle": "courage"
   },
-  "Card17": {
+  "Card16": {
     "Image": "IMG_20250520_235112.jpg",
     "Description": "Rwanda Origin Experience Journey - Witnessed 'the first 10 feet' firsthand as one of 48 global partners, experiencing the care and precision of farming communities who cultivate, harvest, and process coffee, completing the full journey from Amsterdam roasting to understanding that every cup served is an act of respect for those who came before, deeply moved by the authentic spirit and belonging felt among people who live in harmony",
     "Year": 2025,
     "Month": 5,
     "CardStyle": "belonging"
   },
-  "Card18": {
+  "Card17": {
     "Image": "Starbucks-Mihnea Ratte-88.jpg",
     "Description": "Judged National Barista Championships - Evaluated 59 passionate partners culminating from store to district to national finals, introducing special awards for each category to recognize individual excellence, and began 1-to-1 training sessions with the national champion to prepare for EMEA competition in London",
     "Year": 2025,
     "Month": 6,
     "CardStyle": "craft"
   },
-  "Card19": {
+  "Card18": {
     "Image": "SBC_Day_Two_151.jpg",
     "Description": "Judged Starbucks EMEA Competition - Evaluating excellence at the international level",
     "Year": 2025,
