@@ -58,6 +58,68 @@ const createActions = (content, base) => {
   return actions;
 };
 
+// Create tabs for projects with subfolders
+const createTabs = (subfolders, parentName, section, card) => {
+  const tabsContainer = createElement('div', { className: 'tabs-container' });
+  const tabButtons = createElement('div', { className: 'tab-buttons' });
+  
+  subfolders.forEach((subfolder, index) => {
+    const btn = createElement('button', {
+      className: index === 0 ? 'tab-btn active' : 'tab-btn',
+      textContent: subfolder,
+      'data-subfolder': subfolder
+    });
+    
+    btn.addEventListener('click', async (e) => {
+      // Remove active class from all tabs
+      tabButtons.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      // Add active class to clicked tab
+      e.target.classList.add('active');
+      
+      // Load the selected subfolder content
+      const base = `./media/${section}/${parentName}/${subfolder}`;
+      const content = await jsonFetch(`${base}/content.json`);
+      
+      if (content) {
+        // Update the card content
+        const thumb = card.querySelector('.thumb');
+        const contentEl = card.querySelector('.content');
+        
+        // Update thumbnail
+        const newThumb = createThumbnail(content, base, subfolder);
+        thumb.replaceWith(newThumb);
+        
+        // Update description
+        const descriptionEl = contentEl.querySelector('p');
+        if (descriptionEl) {
+          descriptionEl.innerHTML = (content.Description || '')
+            .replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;')
+            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+            .replace(/\n/g, '<br>');
+        }
+        
+        // Update meta
+        const metaEl = contentEl.querySelector('.meta');
+        if (metaEl) {
+          metaEl.textContent = `${parentName} — ${subfolder}`;
+        }
+        
+        // Update actions
+        const actionsEl = contentEl.querySelector('.actions');
+        if (actionsEl) {
+          const newActions = createActions(content, base);
+          actionsEl.replaceWith(newActions);
+        }
+      }
+    });
+    
+    tabButtons.appendChild(btn);
+  });
+  
+  tabsContainer.appendChild(tabButtons);
+  return tabsContainer;
+};
+
 // Load individual project card
 const loadProject = async (name, section = 'home') => {
   const base = `./media/${section}/${name}`;
@@ -68,23 +130,39 @@ const loadProject = async (name, section = 'home') => {
     return null;
   }
 
+  // Check if this is a project with subfolders
+  const hasSubfolders = content.subfolders && Array.isArray(content.subfolders) && content.subfolders.length > 0;
+  
+  let actualContent = content;
+  let actualBase = base;
+  let displayName = name;
+  
+  // If has subfolders, load the first subfolder's content
+  if (hasSubfolders) {
+    const firstSubfolder = content.subfolders[0];
+    actualBase = `${base}/${firstSubfolder}`;
+    actualContent = await jsonFetch(`${actualBase}/content.json`) || content;
+    displayName = `${name} — ${firstSubfolder}`;
+  }
+
   // Create card structure
   const card = createElement('article', { className: 'card' });
-  const thumb = createThumbnail(content, base, name);
+  const thumb = createThumbnail(actualContent, actualBase, displayName);
   
   // Create description with line breaks, tabs, and bold formatting
   const descriptionEl = createElement('p');
-  descriptionEl.innerHTML = (content.Description || '')
+  descriptionEl.innerHTML = (actualContent.Description || '')
     .replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;')
     .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
     .replace(/\n/g, '<br>');
   
   const contentEl = createElement('div', { className: 'content' }, [
-    createElement('h3', { textContent: content.Text || name }),
-    createElement('div', { className: 'meta', textContent: name }),
+      createElement('h3', { textContent: name }),
+    hasSubfolders ? createTabs(content.subfolders, name, section, card) : null,
+    createElement('div', { className: 'meta', textContent: displayName }),
     descriptionEl,
-    createActions(content, base)
-  ]);
+    createActions(actualContent, actualBase)
+  ].filter(Boolean));
 
   card.appendChild(thumb);
   card.appendChild(contentEl);
