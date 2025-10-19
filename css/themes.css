@@ -1,0 +1,158 @@
+/* Card Style Themes - Based on 5 Core Values */
+
+/* Belonging - Creating a culture where everyone is welcome */
+.card-belonging{
+  --accent-color:#e7f2ee;
+  --accent-color-light:#f0f7f4;
+  border-color:rgba(231,242,238,0.6);
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='80' height='80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='37' cy='40' r='2' fill='%2391bf9d' opacity='0.15'/%3E%3Ccircle cx='43' cy='40' r='2' fill='%2391bf9d' opacity='0.15'/%3E%3C/svg%3E"),
+    linear-gradient(135deg, rgba(231,242,238,0.3) 0%, var(--glass-frosted) 100%);
+  background-size:40px 40px, 100%;
+  background-position:0 0, center;
+}
+
+.card-belonging:hover{
+  border-color:rgba(231,242,238,0.8);
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='80' height='80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='37' cy='40' r='2' fill='%2391bf9d' opacity='0.25'/%3E%3Ccircle cx='43' cy='40' r='2' fill='%2391bf9d' opacity='0.25'/%3E%3C/svg%3E"),
+    linear-gradient(135deg, rgba(231,242,238,0.5) 0%, rgba(255,255,255,0.45) 100%);
+  box-shadow:0 12px 40px rgba(145,191,157,0.2);
+}
+
+/* Courage - Challenging the status quo and taking risks */
+.card-courage{
+  --accent-color:#d2d378;
+  --accent-color-light:#dfe093;
+  border-color:rgba(210,211,120,0.5);
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='80' height='80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M38 40 L40 37 L42 40' stroke='%23a9945a' stroke-width='1.5' fill='none' opacity='0.18'/%3E%3C/svg%3E"),
+    linear-gradient(135deg, rgba(210,211,120,0.2) 0%, var(--glass-frosted) 100%);
+  background-size:40px 40px, 100%;
+  background-position:0 0, center;
+}
+
+.card-courage:hover{
+  border-color:rgba(210,211,120,0.7);
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='80' height='80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M38 40 L40 37 L42 40' stroke='%23a9945a' stroke-width='1.5' fill='none' opacity='0.28'/%3E%3C/svg%3E"),
+    linear-gradient(135deg, rgba(210,211,120,0.35) 0%, rgba(255,255,255,0.45) 100%);
+  box-shadow:0 12px 40px rgba(169,148,90,0.2);
+}
+
+/* Joy - Taking pride in work and celebrating successes */
+.card-joy{
+  --accent-color:#eaa483;
+  --accent-color-light:#f2b89b;
+  border-color:rgba(234,164,131,0.5);
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='80' height='80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 37 L43 40 L40 43 L37 40 Z' fill='%23eaa483' opacity='0.15'/%3E%3C/svg%3E"),
+    linear-gradient(135deg, rgba(234,164,131,0.2) 0%, var(--glass-frosted) 100%);
+  background-size:40px 40px, 100%;
+  background-position:0 0, center;
+}
+
+.card-joy:hover{
+  border-color:rgba(234,164,131,0.7);
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='80' height='80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 37 L43 40 L40 43 L37 40 Z' fill='%23eaa483' opacity='0.25'/%3E%3C/svg%3E"),
+    linear-gradient(135deg, rgba(234,164,131,0.35) 0%, rgba(255,255,255,0.45) 100%);
+  box-shadow:0 12px 40px rgba(234,164,131,0.2);
+}
+
+/* Results - Achieving goals with focus, integrity, and drive */
+.card-results{
+  --accent-color:#91bf9d;
+  --accent-color-light:#a8d0b3;
+  border-color:rgba(145,191,157,0.5);
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='80' height='80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='3' fill='%2391bf9d' opacity='0.18'/%3E%3C/svg%3E"),
+    linear-gradient(135deg, rgba(145,191,157,0.2) 0%, var(--glass-frosted) 100%);
+  background-size:40px 40px, 100%;
+  background-position:0 0, center;
+}
+
+.card-results:hover{
+  border-color:rgba(145,191,157,0.7);
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='80' height='80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='3' fill='%2391bf9d' opacity='0.28'/%3E%3C/svg%3E"),
+    linear-gradient(135deg, rgba(145,191,157,0.35) 0%, rgba(255,255,255,0.45) 100%);
+  box-shadow:0 12px 40px rgba(145,191,157,0.22);
+}
+
+/* Craft - Commitment to excellence and continuous learning */
+.card-craft{
+  --accent-color:#a9945a;
+  --accent-color-light:#c0ab78;
+  border-color:rgba(169,148,90,0.5);
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='80' height='80' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='38' y='38' width='4' height='4' fill='%23a9945a' opacity='0.15' transform='rotate(45 40 40)'/%3E%3C/svg%3E"),
+    linear-gradient(135deg, rgba(169,148,90,0.2) 0%, var(--glass-frosted) 100%);
+  background-size:40px 40px, 100%;
+  background-position:0 0, center;
+}
+
+.card-craft:hover{
+  border-color:rgba(169,148,90,0.7);
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='80' height='80' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='38' y='38' width='4' height='4' fill='%23a9945a' opacity='0.25' transform='rotate(45 40 40)'/%3E%3C/svg%3E"),
+    linear-gradient(135deg, rgba(169,148,90,0.35) 0%, rgba(255,255,255,0.45) 100%);
+  box-shadow:0 12px 40px rgba(169,148,90,0.2);
+}
+
+/* Default - Generic milestone */
+.card-default{
+  --accent-color:#2c6847;
+  --accent-color-light:#4a9e6f;
+  border-color:rgba(44,104,71,0.3);
+  background:var(--glass-frosted);
+}
+
+.card-default:hover{
+  border-color:rgba(44,104,71,0.5);
+}
+
+/* Value Label Styles */
+.value-label{
+  position:absolute;
+  top:-1rem;
+  left:50%;
+  transform:translateX(-50%);
+  padding:0.4rem 1.2rem;
+  border-radius:20px;
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  box-shadow:0 4px 12px rgba(0,0,0,0.15);
+  z-index:10;
+  white-space:nowrap;
+}
+
+.value-belonging{
+  background:linear-gradient(135deg, #e7f2ee 0%, #91bf9d 100%);
+  color:#2c6847;
+  border:2px solid #91bf9d;
+}
+
+.value-courage{
+  background:linear-gradient(135deg, #d2d378 0%, #a9945a 100%);
+  color:#5a4d2e;
+  border:2px solid #a9945a;
+}
+
+.value-joy{
+  background:linear-gradient(135deg, #eaa483 0%, #f2b89b 100%);
+  color:#7a3d1f;
+  border:2px solid #eaa483;
+}
+
+.value-results{
+  background:linear-gradient(135deg, #91bf9d 0%, #a8d0b3 100%);
+  color:#2c6847;
+  border:2px solid #91bf9d;
+}
+
+.value-craft{
+  background:linear-gradient(135deg, #a9945a 0%, #c0ab78 100%);
+  color:#5a4d2e;
+  border:2px solid #a9945a;
+}

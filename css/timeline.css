@@ -1,0 +1,215 @@
+/* Timeline Component Styles */
+
+.timeline{
+  max-width:900px;
+  margin:2rem auto;
+  padding:2rem 0;
+  position:relative;
+}
+
+/* Year Section */
+.year-section{
+  margin-bottom:3rem;
+  background:rgba(255,255,255,0.3);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  border-radius:var(--radius);
+  border:1px solid rgba(255,255,255,0.4);
+  overflow:hidden;
+  box-shadow:0 4px 20px rgba(0,0,0,0.08);
+}
+
+.year-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:1.5rem 2rem;
+  background:linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  cursor:pointer;
+  transition:background 0.3s ease;
+  user-select:none;
+}
+
+.year-header:hover{
+  background:linear-gradient(135deg, #2c6847 0%, #3d8b5e 100%);
+}
+
+.year-header:focus{
+  outline:2px solid rgba(255,255,255,0.8);
+  outline-offset:-2px;
+}
+
+.year-header[aria-expanded="false"] .year-toggle{
+  transform:rotate(-90deg);
+}
+
+.year-content{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height 0.5s ease, padding 0.5s ease;
+  padding:0 2rem;
+}
+
+.year-content.expanded{
+  max-height:100000px;
+  padding:2rem;
+}
+
+/* Month Container */
+.month-container{
+  margin-bottom:2.5rem;
+  position:relative;
+}
+
+.month-container:last-child{
+  margin-bottom:0;
+}
+
+.month-header{
+  margin-bottom:1.5rem;
+  padding-bottom:0.75rem;
+  border-bottom:3px solid var(--primary-color);
+  position:relative;
+}
+
+.month-header::after{
+  content:'';
+  position:absolute;
+  bottom:-3px;
+  left:0;
+  width:80px;
+  height:3px;
+  background:var(--secondary-color);
+}
+
+.month-events{
+  display:grid;
+  gap:1.5rem;
+}
+
+/* Timeline Card */
+.timeline-card{
+  background:var(--glass-frosted);
+  backdrop-filter:blur(15px);
+  -webkit-backdrop-filter:blur(15px);
+  border-radius:var(--radius);
+  padding:1.5rem;
+  border:1px solid rgba(255,255,255,0.5);
+  box-shadow:0 8px 32px rgba(0,0,0,0.1);
+  transition:transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+  will-change:transform;
+  contain:layout style paint;
+  position:relative;
+  overflow:hidden;
+  opacity:0;
+  animation:fadeInUp 0.6s ease forwards;
+  display:flex;
+  flex-direction:row;
+  gap:2rem;
+  align-items:center;
+}
+
+.timeline-card::before{
+  content:'';
+  position:absolute;
+  left:0;
+  top:0;
+  bottom:0;
+  width:5px;
+  background:linear-gradient(180deg, var(--accent-color, #2c6847), var(--accent-color-light, #4a9e6f));
+  opacity:0.8;
+  transition:width 0.3s ease, opacity 0.3s ease;
+}
+
+.timeline-card:hover{
+  background:rgba(255,255,255,0.45);
+  box-shadow:0 12px 40px rgba(0,0,0,0.15);
+  transform:translateX(5px);
+}
+
+.timeline-card:hover::before{
+  width:8px;
+  opacity:1;
+}
+
+/* Timeline Image */
+.timeline-image{
+  flex-shrink:0;
+  width:320px;
+  height:280px;
+  border-radius:12px;
+  overflow:visible;
+  margin-bottom:0;
+  background:rgba(255,255,255,0.5);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+}
+
+.timeline-image img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  padding:1rem;
+  border-radius:12px;
+  overflow:hidden;
+}
+
+/* Legacy Timeline Item (for backwards compatibility) */
+.timeline-item{
+  display:grid;
+  grid-template-columns:120px 40px 1fr;
+  gap:1.5rem;
+  margin-bottom:3rem;
+  position:relative;
+  opacity:0;
+  animation:fadeInUp 0.6s ease forwards;
+}
+
+.timeline-year{
+  text-align:right;
+  font-size:1.8rem;
+  font-weight:700;
+  color:var(--primary-color);
+  padding-top:1rem;
+  line-height:1;
+}
+
+.timeline-dot{
+  position:relative;
+  width:40px;
+  height:40px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.timeline-dot::before{
+  content:'';
+  width:20px;
+  height:20px;
+  border-radius:50%;
+  background:var(--primary-color);
+  border:4px solid var(--secondary-color);
+  box-shadow:0 0 0 4px var(--glass-frosted);
+  position:relative;
+  z-index:2;
+}
+
+.timeline-dot::after{
+  content:'';
+  position:absolute;
+  top:40px;
+  left:50%;
+  transform:translateX(-50%);
+  width:3px;
+  height:calc(100% + 3rem);
+  background:linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+  z-index:1;
+}
+
+.timeline-item:last-child .timeline-dot::after{
+  display:none;
+}

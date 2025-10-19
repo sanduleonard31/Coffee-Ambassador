@@ -1,0 +1,25 @@
+/* CSS Variables - Design Tokens */
+:root{
+  /* Brand Colors */
+  --primary-color: #2c6847;
+  --secondary-color: #ddeae6;
+  --accent-color: #337651;
+  --background-color: #f9f9fa;
+  --text-color: #1a372c;
+  
+  /* Glass Effects */
+  --glass-color: rgba(255,255,255,0.18);
+  --glass-frosted: rgba(255,255,255,0.35);
+  --blur: 6px;
+  
+  /* Spacing & Layout */
+  --radius: 16px;
+  --gap: 1rem;
+  
+  /* Brand Values Colors */
+  --value-belonging: #e7f2ee;
+  --value-courage: #d2d378;
+  --value-joy: #eaa483;
+  --value-results: #91bf9d;
+  --value-craft: #a9945a;
+}

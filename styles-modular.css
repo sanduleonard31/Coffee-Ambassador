@@ -1,0 +1,29 @@
+/* Coffee Ambassador - Main Stylesheet */
+/* This file imports all modular CSS files in the correct order */
+
+/* 1. CSS Variables & Design Tokens */
+@import 'css/variables.css';
+
+/* 2. Reset & Base Styles */
+@import 'css/reset.css';
+
+/* 3. Layout Structure */
+@import 'css/layout.css';
+
+/* 4. Typography */
+@import 'css/typography.css';
+
+/* 5. Reusable Components */
+@import 'css/components.css';
+
+/* 6. Timeline Component */
+@import 'css/timeline.css';
+
+/* 7. Theme & Card Styles */
+@import 'css/themes.css';
+
+/* 8. Animations & Effects */
+@import 'css/effects.css';
+
+/* 9. Responsive Design */
+@import 'css/responsive.css';

@@ -1,0 +1,125 @@
+/* Typography Styles */
+
+/* Logo & Brand */
+.logo h1{
+  margin:0;
+  font-size:1.5rem;
+  color:var(--primary-color);
+  font-weight:700;
+}
+
+/* Hero Typography */
+.hero-content h2{
+  margin:0 0 1rem;
+  font-size:2.5rem;
+  color:var(--primary-color);
+  font-weight:700;
+}
+
+.hero-subtitle{
+  margin:0;
+  font-size:1.2rem;
+  color:var(--text-color);
+  opacity:0.9;
+}
+
+/* Card Typography */
+.card h3{
+  margin:0 0 0.25rem;
+}
+
+.card p{
+  margin:0 0 0.5rem;
+  color:rgba(26,55,44,0.9);
+}
+
+/* Meta Text */
+.meta{
+  font-size:0.85rem;
+  color:rgba(26,55,44,0.6);
+  margin-bottom:0.5rem;
+}
+
+/* Footer Typography */
+.footer-section h3{
+  margin:0 0 0.5rem;
+  color:var(--primary-color);
+  font-size:1.3rem;
+}
+
+.footer-section h4{
+  margin:0 0 1rem;
+  color:var(--primary-color);
+  font-size:1.1rem;
+}
+
+.footer-section p{
+  margin:0.5rem 0;
+  color:var(--text-color);
+  opacity:0.8;
+}
+
+.footer-bottom p{
+  margin:0;
+  color:var(--text-color);
+  opacity:0.7;
+  font-size:0.9rem;
+}
+
+/* Timeline Typography */
+.year-title{
+  font-size:2.5rem;
+  font-weight:800;
+  color:white;
+  margin:0;
+  text-shadow:2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.year-toggle{
+  font-size:1.5rem;
+  color:white;
+  transition:transform 0.3s ease;
+  font-weight:bold;
+}
+
+.month-title{
+  font-size:1.8rem;
+  font-weight:700;
+  color:var(--primary-color);
+  margin:0;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+.description-main{
+  font-size:1.2rem;
+  font-weight:600;
+  line-height:1.5;
+  color:var(--text-color);
+  margin:0 0 0.75rem 0;
+}
+
+.description-subtitle{
+  font-size:1rem;
+  line-height:1.6;
+  color:rgba(44,62,80,0.75);
+  margin:0;
+  font-style:italic;
+  padding-left:1rem;
+  border-left:3px solid var(--accent-color, rgba(44,104,71,0.3));
+}
+
+.timeline-description{
+  font-size:1.1rem;
+  line-height:1.6;
+  color:var(--text-color);
+  margin:0;
+  flex:1;
+}
+
+/* Value Labels */
+.value-label{
+  font-size:0.85rem;
+  font-weight:800;
+  letter-spacing:1.5px;
+}
