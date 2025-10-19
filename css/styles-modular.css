@@ -2,28 +2,28 @@
 /* This file imports all modular CSS files in the correct order */
 
 /* 1. CSS Variables & Design Tokens */
-@import 'css/variables.css';
+@import './variables.css';
 
 /* 2. Reset & Base Styles */
-@import 'css/reset.css';
+@import './reset.css';
 
 /* 3. Layout Structure */
-@import 'css/layout.css';
+@import './layout.css';
 
 /* 4. Typography */
-@import 'css/typography.css';
+@import './typography.css';
 
 /* 5. Reusable Components */
-@import 'css/components.css';
+@import './components.css';
 
 /* 6. Timeline Component */
-@import 'css/timeline.css';
+@import './timeline.css';
 
 /* 7. Theme & Card Styles */
-@import 'css/themes.css';
+@import './themes.css';
 
 /* 8. Animations & Effects */
-@import 'css/effects.css';
+@import './effects.css';
 
 /* 9. Responsive Design */
-@import 'css/responsive.css';
+@import './responsive.css';

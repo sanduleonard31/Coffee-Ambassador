@@ -72,10 +72,17 @@ const loadProject = async (name, section = 'home') => {
   const card = createElement('article', { className: 'card' });
   const thumb = createThumbnail(content, base, name);
   
+  // Create description with line breaks, tabs, and bold formatting
+  const descriptionEl = createElement('p');
+  descriptionEl.innerHTML = (content.Description || '')
+    .replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;')
+    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\n/g, '<br>');
+  
   const contentEl = createElement('div', { className: 'content' }, [
     createElement('h3', { textContent: content.Text || name }),
     createElement('div', { className: 'meta', textContent: name }),
-    createElement('p', { textContent: content.Description || '' }),
+    descriptionEl,
     createActions(content, base)
   ]);
 

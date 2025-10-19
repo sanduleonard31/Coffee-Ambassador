@@ -24,8 +24,8 @@
 }
 
 .card .thumb{
-  width:280px;
-  height:190px;
+  width: 100%;
+  height: auto;
   flex:0 0 280px;
   border-radius:12px;
   overflow:hidden;
