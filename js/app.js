@@ -120,6 +120,73 @@ const createTabs = (subfolders, parentName, section, card) => {
   return tabsContainer;
 };
 
+const setupCustomerWorkshopsCard = (card, data) => {
+  if (!data || !Array.isArray(data.CustomerWorkshops) || data.CustomerWorkshops.length === 0) {
+    return;
+  }
+
+  const contentSection = card.querySelector('.content');
+  if (!contentSection) return;
+
+  const menu = createElement('div', { className: 'customer-workshops-menu' });
+  const topicsContainer = createElement('div', { className: 'customer-workshops-topics' });
+
+  const renderPlaceholder = () => {
+    topicsContainer.classList.add('is-empty');
+    topicsContainer.innerHTML = '';
+    topicsContainer.appendChild(createElement('p', {
+      className: 'customer-workshops-placeholder',
+      textContent: 'Select a workshop to explore the curriculum.'
+    }));
+  };
+
+  contentSection.appendChild(menu);
+  contentSection.appendChild(topicsContainer);
+
+  const renderWorkshop = (idx) => {
+    topicsContainer.classList.remove('is-empty');
+    topicsContainer.innerHTML = '';
+    const selectedWorkshop = data.CustomerWorkshops[idx];
+    if (!selectedWorkshop || !Array.isArray(selectedWorkshop.topics)) {
+      renderPlaceholder();
+      return;
+    }
+
+    topicsContainer.appendChild(createElement('h4', { textContent: selectedWorkshop.title }));
+
+    const list = createElement('ul');
+    selectedWorkshop.topics.forEach(topic => {
+      list.appendChild(createElement('li', { textContent: topic }));
+    });
+
+    topicsContainer.appendChild(list);
+  };
+
+  renderPlaceholder();
+
+  data.CustomerWorkshops.forEach((workshop, idx) => {
+    const chip = createElement('button', {
+      type: 'button',
+      className: 'customer-workshops-chip',
+      textContent: workshop.title
+    });
+
+    chip.addEventListener('click', () => {
+      // reset active state
+      menu.querySelectorAll('.customer-workshops-chip').forEach(btn => btn.classList.remove('is-active'));
+      chip.classList.add('is-active');
+      renderWorkshop(idx);
+    });
+
+    menu.appendChild(chip);
+
+    if (idx === 0) {
+      chip.classList.add('is-active');
+      renderWorkshop(idx);
+    }
+  });
+};
+
 // Load individual project card
 const loadProject = async (name, section = 'home') => {
   const base = `./media/${section}/${name}`;
@@ -151,21 +218,28 @@ const loadProject = async (name, section = 'home') => {
   
   // Create description with line breaks, tabs, and bold formatting
   const descriptionEl = createElement('p');
-  descriptionEl.innerHTML = (actualContent.Description || '')
+  const descriptionText = name === 'Customers Workshops' ? '' : (actualContent.Description || '');
+  descriptionEl.innerHTML = descriptionText
     .replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;')
     .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
     .replace(/\n/g, '<br>');
   
-  const contentEl = createElement('div', { className: 'content' }, [
-      createElement('h3', { textContent: name }),
+  const contentChildren = [
+    createElement('h3', { textContent: name }),
     hasSubfolders ? createTabs(content.subfolders, name, section, card) : null,
-    createElement('div', { className: 'meta', textContent: displayName }),
-    descriptionEl,
+    name === 'Customers Workshops' ? null : descriptionEl,
     createActions(actualContent, actualBase)
-  ].filter(Boolean));
+  ].filter(Boolean);
+
+  const contentEl = createElement('div', { className: 'content' }, contentChildren);
 
   card.appendChild(thumb);
   card.appendChild(contentEl);
+
+  if (name === 'Customers Workshops') {
+    card.classList.add('customer-workshops-card');
+    setupCustomerWorkshopsCard(card, actualContent);
+  }
   
   return card;
 };
@@ -173,33 +247,30 @@ const loadProject = async (name, section = 'home') => {
 // Load all projects from index
 const loadIndex = async () => {
   const idx = await jsonFetch(`${MEDIA_PATH}/index.json`);
-  
   if (!idx || !Array.isArray(idx.projects)) {
     gallery.innerHTML = '<p class="meta">No media index found. Create media/home/index.json listing folders.</p>';
     return;
   }
-  
   // Clear loading message
   gallery.innerHTML = '';
-  
   // Load projects with error handling
   const cardPromises = idx.projects.map(name => loadProject(name, 'home'));
   const cards = await Promise.all(cardPromises);
-  
   // Append valid cards to gallery using DocumentFragment for better performance
   const fragment = document.createDocumentFragment();
   cards.forEach(card => {
     if (card) fragment.appendChild(card);
   });
   gallery.appendChild(fragment);
-  
+
   // Show message if no cards loaded
   if (gallery.children.length === 0) {
     gallery.innerHTML = '<p class="meta">No projects available.</p>';
   }
 };
 
-// Initialize
-document.addEventListener('DOMContentLoaded', loadIndex);
+document.addEventListener('DOMContentLoaded', () => {
+  loadIndex();
+});
 
 export {};

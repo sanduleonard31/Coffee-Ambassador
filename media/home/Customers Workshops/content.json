@@ -1,8 +1,83 @@
 {
   "Text":"",
-  "Description":"",
+  "Description":"Customer Workshops Structure",
+  "CustomerWorkshops": [
+    {
+      "title": "Alternative Brewing",
+      "topics": [
+        "Methods of brewing (Concepts)",
+        "Devices History",
+        "Devices Impact",
+        "The 4 Fundamentals",
+        "Experimenting with Fundamentals",
+        "Brewing Techniques"
+      ]
+    },
+    {
+      "title": "Orygins",
+      "topics": [
+        "Geographical placement",
+        "Profile Tendencies",
+        "Tasting Steps",
+        "Coffee Characteristics",
+        "Terroir and climate impact",
+        "Agricultural tendencies",
+        "Bag Designs",
+        "Starbucks Origins stories"
+      ]
+    },
+    {
+      "title": "History",
+      "topics": [
+        "First Coffee",
+        "Discovery of diseases",
+        "Geographical Journey",
+        "Key Moments",
+        "Key figures",
+        "Starbucks History"
+      ]
+    },
+    {
+      "title": "GreenLife",
+      "topics": [
+        "Mission and Values",
+        "Our Commitment",
+        "Conservation International",
+        "Organic",
+        "Fairtrade",
+        "C.A.F.E",
+        "Hacienda Farm",
+        "Farmer Support Centers",
+        "Farmer Communities Investments",
+        "Social Projects",
+        "CRC Projects",
+        "How to be a Sustainable Customer"
+      ]
+    },
+    {
+      "title": "Master's Experience",
+      "topics": [
+        "FlavorLock",
+        "Coffee Tree Cycle",
+        "Farming Periods",
+        "Diseases",
+        "Species",
+        "Altitudes",
+        "Climate",
+        "Soil",
+        "Processing",
+        "Roasting",
+        "Bean Anatomy",
+        "Decaffeination",
+        "Aging Coffee",
+        "Tasting Quality",
+        "Caffeine Chemistry",
+        "Genetic Research"
+      ]
+    }
+  ],
   "Link":"",
-  "Image":"",
+  "Image":"image.svg",
   "Video":"",
   "Pdf":""
 }
