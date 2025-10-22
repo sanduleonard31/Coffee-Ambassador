@@ -32,6 +32,21 @@ const createThumbnail = (content, base, name) => {
   return thumb;
 };
 
+// Create second thumbnail if second image exists
+const createSecondThumbnail = (content, base, name) => {
+  if (!content['image 2']) return null;
+  
+  const thumb2 = createElement('div', { className: 'thumb thumb-second' });
+  const img2 = createElement('img', {
+    src: `${base}/${content['image 2']}`,
+    alt: `${content.Text || name} - 2`
+  });
+  lazyLoadImage(img2);
+  thumb2.appendChild(img2);
+  
+  return thumb2;
+};
+
 // Create action buttons
 const createActions = (content, base) => {
   const actions = createElement('div', { className: 'actions' });
@@ -83,11 +98,33 @@ const createTabs = (subfolders, parentName, section, card) => {
       if (content) {
         // Update the card content
         const thumb = card.querySelector('.thumb');
+        const thumb2 = card.querySelector('.thumb-second');
         const contentEl = card.querySelector('.content');
         
-        // Update thumbnail
+        // Update first thumbnail
         const newThumb = createThumbnail(content, base, subfolder);
         thumb.replaceWith(newThumb);
+        
+        // Handle second thumbnail
+        const newThumb2 = createSecondThumbnail(content, base, subfolder);
+        if (newThumb2) {
+          // If new content has second image
+          if (thumb2) {
+            // Replace existing second thumbnail
+            thumb2.replaceWith(newThumb2);
+          } else {
+            // Add new second thumbnail after the first one
+            const firstThumb = card.querySelector('.thumb');
+            firstThumb.insertAdjacentElement('afterend', newThumb2);
+            card.classList.add('has-two-thumbnails');
+          }
+        } else {
+          // If new content doesn't have second image, remove it
+          if (thumb2) {
+            thumb2.remove();
+            card.classList.remove('has-two-thumbnails');
+          }
+        }
         
         // Update description
         const descriptionEl = contentEl.querySelector('p');
@@ -234,6 +271,14 @@ const loadProject = async (name, section = 'home') => {
   const contentEl = createElement('div', { className: 'content' }, contentChildren);
 
   card.appendChild(thumb);
+  
+  // Add second thumbnail if it exists
+  const thumb2 = createSecondThumbnail(actualContent, actualBase, displayName);
+  if (thumb2) {
+    card.appendChild(thumb2);
+    card.classList.add('has-two-thumbnails');
+  }
+  
   card.appendChild(contentEl);
 
   if (name === 'Customers Workshops') {
